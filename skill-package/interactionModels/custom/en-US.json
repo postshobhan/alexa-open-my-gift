@@ -1,0 +1,101 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my gift",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MyGiftIntent",
+          "slots": [
+            {
+              "name": "gift_type",
+              "type": "giftType",
+              "samples": [
+                "I prefer {gift_type}",
+                "I would prefer {gift_type}",
+                "I love {gift_type}",
+                "I would love {gift_type}",
+                "I like {gift_type}",
+                "I would like {gift_type}"
+              ]
+            }
+          ],
+          "samples": [
+            "where is my gift",
+            "where is the gift",
+            "gift"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+            "name": "giftType",
+            "values": [
+              {
+                  "name": {
+                      "value": "gift",
+                      "synonyms": [
+                        "chocolate",
+                        "chocolates",
+                        "flower",
+                        "flowers",
+                        "both"
+                      ]
+                  }
+              }
+            ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+        "name": "MyGiftIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+            {
+              "name": "gift_type",
+              "type": "giftType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                  "elicitation": "Elicit.Intent-MyGiftIntent.IntentSlot-gift_type"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-MyGiftIntent.IntentSlot-gift_type",
+        "variations": [
+          {
+              "type": "PlainText",
+              "value": "Your partner told me, you love chocolates and flowers. Which one would you prefer the most, chocolates or flowers"
+          }
+        ]
+      }
+    ]
+  }
+}
