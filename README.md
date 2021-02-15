@@ -1,12 +1,12 @@
 # Build An Alexa skill to Open My Gift
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-### This is a simple tutorial to introduce a Alexa skill to be able to respond to open my gift command.
+### This is a simple tutorial to introduce an Alexa skill to be able to respond to open my gift command.
 
 ## How to modify the voice commands/outputs
 You may modify the below mentioned files to have your desired voice commands and output
-* skill-package/interactionModels/custom/en-US.json
-* 
+* alexa-open-my-gift/skill-package/interactionModels/custom/en-US.json
+* alexa-open-my-gift/lambda/custom/index.js
 
 ## Skill Architecture
 Each skill consists of two basic parts, a front end and a back end.
